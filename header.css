@@ -1,0 +1,107 @@
+:root {
+    --fonte-principal: "Poppins"
+    --fonte-secundaria "Josefin Sans";
+    --preto: #000000;
+}
+
+.cabecalho__menu-hamburguer {
+    width: 30px;
+    height: 30px;
+    background-image: url(../Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+.container__imagem {
+    padding: 1em;
+}
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 30vh;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: #EB9B00;
+    font-weight: 700;
+    font-family: var(--fonte-principal);
+}
+
+.lista-menu__link {
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opçoes {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .container__titulo, .container__titulo--negrito {
+        font-family: var(--fonte-secundaria); 
+        font-size: 30px;  
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+       font-weight: 700; 
+    }
+
+    .opçoes {
+        display: flex;
+    }
+
+    .opçoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+        font-family: var(--fonte-principal);
+    }
+
+    .opçoes__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+}
